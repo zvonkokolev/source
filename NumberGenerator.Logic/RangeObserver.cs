@@ -58,13 +58,16 @@ namespace NumberGenerator.Logic
 
 		public override string ToString()
 		{
-			throw new NotImplementedException();
+			return $"{base.ToString()}: Number is in range ({LowerRange}-{UpperRange}): ";
 		}
 
 		public override void OnNextNumber(int number)
 		{
 			if (number >= LowerRange && number <= UpperRange)
 			{
+				Console.ForegroundColor = ConsoleColor.Green;
+				Console.WriteLine($"\t\t>>{ToString()}---> {number}");
+				Console.ResetColor();
 				NumbersInRange++;
 				NumbersOfHitsToWaitFor--;
 				if(NumbersOfHitsToWaitFor == 0)

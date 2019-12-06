@@ -17,10 +17,13 @@ namespace NumberGenerator.Ui
 			RangeObserver rangeObserver = new RangeObserver(numberGenerator, 5, 200, 300);
 			QuickTippObserver quickTippObserver = new QuickTippObserver(numberGenerator);
 
-
 			// Nummerngenerierung starten
 			// Resultat ausgeben
 			numberGenerator.StartNumberGeneration();
+			Console.WriteLine();
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine($"{statisticsObserver.ToString()}");
+			Console.ResetColor();
 
 		}
 	}

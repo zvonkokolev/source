@@ -71,7 +71,7 @@ namespace NumberGenerator.Logic
 		}
 		public override string ToString()
 		{
-			return $"BaseObserver [CountOfNumbersReceived='{CountOfNumbersReceived}', CountOfNumbersToWaitFor='{CountOfNumbersToWaitFor}'] => StatisticsObserver [Min='{Min}', Max='{Max}', Sum='{Sum}', Avg='{Avg}']";
+			return $"BaseObserver [CountOfNumbersReceived='{CountOfNumbersReceived}', CountOfNumbersToWaitFor='{CountOfNumbersToWaitFor}'] => {this.GetType().Name} [Min='{Min}', Max='{Max}', Sum='{Sum}', Avg='{Avg}']";
 		}
 
 		#endregion

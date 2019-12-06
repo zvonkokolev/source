@@ -112,7 +112,7 @@ namespace NumberGenerator.Logic
 
 		public override string ToString()
 		{
-			return $"NumberGenerator: Number generated: ";
+			return $"{GetType().Name}: Number generated: ";
 		}
 
 		/// <summary>

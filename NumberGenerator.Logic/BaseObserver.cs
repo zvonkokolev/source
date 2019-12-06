@@ -62,7 +62,7 @@ namespace NumberGenerator.Logic
 
 		public override string ToString()
 		{
-			throw new NotImplementedException();
+			return $"{this.GetType().Name}";
 		}
 
 		protected void DetachFromNumberGenerator()

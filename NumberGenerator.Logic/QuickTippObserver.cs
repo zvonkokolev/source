@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace NumberGenerator.Logic
 {
@@ -43,13 +44,24 @@ namespace NumberGenerator.Logic
 			CountOfNumbersReceived++;
 			if(QuickTippNumbers.Count == 6)
 			{
+				Console.WriteLine();
+				Console.ForegroundColor = ConsoleColor.Cyan;
+				Console.WriteLine($"{this.GetType().Name}: Received {CountOfNumbersReceived:d5} numbers ===> Quick-Typ is {ToString()}");
+				Console.ResetColor();
+				Console.WriteLine();
 				DetachFromNumberGenerator();
 			}
 		}
 
 		public override string ToString()
 		{
-			throw new NotImplementedException();
+			StringBuilder stringBuilder = new StringBuilder();
+			foreach (int item in QuickTippNumbers)
+			{
+				stringBuilder.Append(item);
+				stringBuilder.Append(", ");
+			}
+			return stringBuilder.ToString();
 		}
 
 		private void DetachFromNumberGenerator()
